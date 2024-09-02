@@ -2,17 +2,25 @@ import logo from './logo.svg';
 import './App.css';
 import { useSelector } from 'react-redux';
 import { Shop } from './components/Shop';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Form, Route, Router, Routes } from 'react-router-dom';
 import { Links } from './components/Links';
 import { AboutUs } from './components/AboutUs';
 import { ContactUs } from './components/ContactUs';
 import { Search } from './Search';
 import { NotFound } from './components/NotFound';
+
+import Products from './Products';
+import { UseState } from './UseState';
+import { UseMemo1 } from './UseMemo';
 function App() {
-  const amount = useSelector((state) => state.amount.value)
+  // const amount = useSelector((state) => state.amount.value)
   return (
-    <div className="App">
-      <BrowserRouter>
+    <div>
+      {/* <Basic/> */}
+      {/* <Products/> */}
+      {/* <UseState/> */}
+       <UseMemo1/>
+      {/* <BrowserRouter>
       <Links/>
       <Routes>
       <Route index element={<ContactUs/>}/> 
@@ -23,8 +31,8 @@ function App() {
       <Route path='*' Component={NotFound}/>
       </Routes>
       </BrowserRouter>
-      {/* {amount}
-      <Shop/> */}
+      {/* {amount} */}
+      {/* <Shop/> */}
     </div>
   );
 }
